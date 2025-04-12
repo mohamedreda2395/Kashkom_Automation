@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.0 on win32)" generated="2024-12-14T15:47:48.024940" rpa="false" schemaversion="5">
+<suite id="s1" name="OnBoarding" source="C:\automation-main\TestCases\App\OnBoarding.robot">
+<test id="s1-t1" name="open app to login screen" line="23">
+<kw name="Open App" owner="AppCommonKeyWords" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=com.qpn.kamashka</arg>
+<arg>appActivity=com.qpn.kamashka.featureIntro.IntroActivity</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-12-14T15:47:48.454265" elapsed="12.813263"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T15:48:11.269093" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T15:48:01.267528" elapsed="10.006240"/>
+</kw>
+<kw name="Configure Test Timing" owner="AppCommonKeyWords">
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>30s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-12-14T15:48:11.274823" elapsed="0.000994"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:11.274823" elapsed="0.000994"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:47:48.454265" elapsed="22.821552"/>
+</kw>
+<kw name="handle app to login screen" owner="IntroScreensPage">
+<kw name="Allow notification permission" owner="AppCommonKeyWords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:11.278778" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_button']'.</msg>
+<msg time="2024-12-14T15:48:11.673548" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_button']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:11.277816" elapsed="0.395732"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:11.276829" elapsed="0.396719"/>
+</kw>
+<arg>appiumlibrary.click element</arg>
+<arg>${Notification_Permission_Allow_Button}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:11.276829" elapsed="0.397720"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:11.276829" elapsed="0.397720"/>
+</kw>
+<kw name="Assert select country heaer is correct" owner="IntroScreensKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:14.662101" level="INFO">xpath criteria: //android.widget.TextView[contains(@text, "Select Country")]
+xpath criteria: //android.widget.TextView[contains(@text, "Select Country")]
+xpath criteria: //android.widget.TextView[contains(@text, "Select Country")]</msg>
+<arg>@{KWARGS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-14T15:48:11.675548" elapsed="2.986553"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:11.675548" elapsed="2.986553"/>
+</kw>
+<arg>AppiumLibrary.wait until element is visible</arg>
+<arg>//android.widget.TextView[contains(@text, "${SelectCountry_Header}")]</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:11.674549" elapsed="2.987552"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:11.674549" elapsed="2.987552"/>
+</kw>
+<kw name="Assert next button is disable until choose country" owner="IntroScreensKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:14.719479" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn' and @enabled='false']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-14T15:48:14.663100" elapsed="0.057399"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:14.663100" elapsed="0.057399"/>
+</kw>
+<arg>AppiumLibrary.wait until element is visible</arg>
+<arg>//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn' and @enabled='false']</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:14.663100" elapsed="0.057399"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:14.662101" elapsed="0.058398"/>
+</kw>
+<kw name="Choose Kuwait country" owner="IntroScreensKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:14.723514" level="INFO">Clicking element '//android.widget.TextView[contains(@text,"Kuwait")]'.</msg>
+<msg time="2024-12-14T15:48:14.822483" level="INFO">xpath criteria: //android.widget.TextView[contains(@text,"Kuwait")]</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:14.721514" elapsed="0.100969"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:14.721514" elapsed="0.100969"/>
+</kw>
+<arg>AppiumLibrary.click element</arg>
+<arg>${SelectCountry_Kuwait_Button}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:14.721514" elapsed="0.100969"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:14.720499" elapsed="0.101984"/>
+</kw>
+<kw name="Assert next button is enable when choose country" owner="IntroScreensKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:15.717762" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn' and @enabled='true']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-12-14T15:48:14.824447" elapsed="0.893315"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:14.823482" elapsed="0.895286"/>
+</kw>
+<arg>AppiumLibrary.wait until element is visible</arg>
+<arg>//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn' and @enabled='true']</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:14.823482" elapsed="0.895286"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:14.822483" elapsed="0.897281"/>
+</kw>
+<kw name="click on next in select country screen" owner="IntroScreensKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:15.724760" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']'.</msg>
+<msg time="2024-12-14T15:48:15.806681" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:15.721762" elapsed="0.084919"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:15.720761" elapsed="0.085920"/>
+</kw>
+<arg>AppiumLibrary.click element</arg>
+<arg>${SelectCountry_Next_Button}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:15.719764" elapsed="0.086917"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:15.719764" elapsed="0.086917"/>
+</kw>
+<kw name="Location permission only this time" owner="AppCommonKeyWords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:15.809714" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg time="2024-12-14T15:48:16.115264" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<status status="FAIL" start="2024-12-14T15:48:16.115264" elapsed="0.000000">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</status>
+</kw>
+<msg time="2024-12-14T15:48:16.117263" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg time="2024-12-14T15:48:16.118263" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']</msg>
+<msg time="2024-12-14T15:48:16.118263" level="FAIL">ValueError: Element locator '//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']' did not match any elements.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="FAIL" start="2024-12-14T15:48:15.808681" elapsed="0.350580">ValueError: Element locator '//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']' did not match any elements.</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:17.164973" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']'.</msg>
+<msg time="2024-12-14T15:48:17.280568" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:17.159743" elapsed="0.120825"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:15.807682" elapsed="1.473886"/>
+</kw>
+<arg>appiumlibrary.click element</arg>
+<arg>${Location_Permission_OnlyThisTime_Button}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:15.807682" elapsed="1.473886"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:15.807682" elapsed="1.473886"/>
+</kw>
+<kw name="pass 3 onboarding screens" owner="IntroScreensKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:17.284566" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg time="2024-12-14T15:48:17.575165" level="FAIL">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<status status="FAIL" start="2024-12-14T15:48:17.575165" elapsed="0.000000">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</status>
+</kw>
+<msg time="2024-12-14T15:48:17.578166" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg time="2024-12-14T15:48:17.579166" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']</msg>
+<msg time="2024-12-14T15:48:17.579166" level="FAIL">ValueError: Element locator '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']' did not match any elements.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="FAIL" start="2024-12-14T15:48:17.282567" elapsed="0.297602">ValueError: Element locator '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']' did not match any elements.</status>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:18.583673" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']'.</msg>
+<msg time="2024-12-14T15:48:18.655336" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:18.580623" elapsed="0.074713"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:17.282567" elapsed="1.372769"/>
+</kw>
+<arg>AppiumLibrary.click element</arg>
+<arg>${Onboarding_FirstScreen_Next}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:17.281568" elapsed="1.373768"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T15:48:19.656811" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T15:48:18.656334" elapsed="1.001098"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:19.669410" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']'.</msg>
+<msg time="2024-12-14T15:48:19.788980" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:19.661463" elapsed="0.127517"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:19.659450" elapsed="0.129530"/>
+</kw>
+<arg>AppiumLibrary.click element</arg>
+<arg>${Onboarding_SecondScreen_Next}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:19.658425" elapsed="0.131552"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T15:48:20.790090" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T15:48:19.789977" elapsed="1.000113"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-12-14T15:48:20.799091" level="INFO">Clicking element '//android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']'.</msg>
+<msg time="2024-12-14T15:48:20.888751" level="INFO">xpath criteria: //android.widget.Button[@resource-id='com.qpn.kamashka:id/nextBtn']</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-12-14T15:48:20.793095" elapsed="0.096657"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-14T15:48:20.792094" elapsed="0.097658"/>
+</kw>
+<arg>AppiumLibrary.click element</arg>
+<arg>${Onboarding_ThirdScreen_Start}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-12-14T15:48:20.791088" elapsed="0.098664"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-14T15:48:21.890920" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-14T15:48:20.890748" elapsed="1.000172"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:17.281568" elapsed="4.609352"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:11.275817" elapsed="10.615103"/>
+</kw>
+<kw name="Close App" owner="AppCommonKeyWords" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-12-14T15:48:21.891954" elapsed="0.372658"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:48:21.891954" elapsed="0.372658"/>
+</kw>
+<status status="PASS" start="2024-12-14T15:47:48.453269" elapsed="33.811343"/>
+</test>
+<status status="PASS" start="2024-12-14T15:47:48.026939" elapsed="34.238678"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="OnBoarding">OnBoarding</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-14T15:48:16.117263" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+<msg time="2024-12-14T15:48:17.578166" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    SeleniumLibrary.Capture Page Screenshot</msg>
+</errors>
+</robot>

@@ -1,0 +1,21 @@
+1730635524793	geckodriver	INFO	Listening on 127.0.0.1:55056
+1730635527866	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55057" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\AHMED~1.ELS\\AppData\\Local\\Temp\\rust_mozprofiledOLHEt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1730635528090	Marionette	INFO	Marionette enabled
+1730635528169	Marionette	INFO	Listening on port 55070
+WebDriver BiDi listening on ws://127.0.0.1:55057
+Read port: 55070
+1730635528320	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1730635529736	Marionette	INFO	Stopped listening on port 55070
+Dynamically enable window occlusion 1
+console.warn: services.settings: main/search-categorization sync interrupted by shutdown
+console.error: services.settings: 
+  main/fingerprinting-protection-overrides Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+console.error: (new StorageError("Storage error: Error: IndexedDB: main/tracking-protection-lists list() IndexedDB:  execute() The application is shutting down", "resource://services-settings/RemoteSettingsClient.sys.mjs", 153))
+console.error: (new AbortError("IndexedDB: main/search-categorization list() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))

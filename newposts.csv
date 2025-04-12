@@ -1,0 +1,5 @@
+*** Test Cases ***;${mobil};${posturl};[Tags];[Documentation]
+login and open post2;39230022;https://test.kashkom.com/posts?code=d38be055-209b-4a8d-87a1-264000d91714&slug=0000000000000_2;1;This is a test case documentation of the first one.
+login and open post3;39330023;https://test.kashkom.com/posts?code=d38be055-209b-4a8d-87a1-264000d91714&slug=0000000000000_2;1;This is a test case documentation of the first one.
+login and open post4;39430024;https://test.kashkom.com/posts?code=d38be055-209b-4a8d-87a1-264000d91714&slug=0000000000000_2;1;This is a test case documentation of the first one.
+login and open post5;39430025;https://test.kashkom.com/posts?code=d38be055-209b-4a8d-87a1-264000d91714&slug=0000000000000_2;1;This is a test case documentation of the first one.

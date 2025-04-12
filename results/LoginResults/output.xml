@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.8 on win32)" generated="2024-10-29T08:56:43.582807" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginCases" source="D:\Ali\automation-main\002Web\Resources\003-UserManagement\0011101-Login\LoginPage.robot">
+<test id="s1-t1" name="login with valid number" line="39">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-10-29T08:56:43.860529" elapsed="0.000000"/>
+</kw>
+<kw name="Login">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-10-29T08:56:43.862584" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:56:43.863815" level="INFO">Opening browser 'chrome' to base url 'https://test.kashkom.com'.</msg>
+<arg>https://test.kashkom.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-29T08:56:43.862584" elapsed="7.118152"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-29T08:56:50.980736" elapsed="1.034652"/>
+</kw>
+<kw name="Handle Suggestions Dialogue If Present" owner="LoginKeywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="assert Suggestions Dialogue appear" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>@{KWARGS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-29T08:56:52.019005" elapsed="1.013718"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:56:52.017592" elapsed="1.015131"/>
+</kw>
+<arg>seleniumlibrary.wait until page contains</arg>
+<arg>${HEADER_SUGGESTIONS_DIALOG_TEXT}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:56:52.017592" elapsed="1.015131"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:56:52.017592" elapsed="1.015131"/>
+</kw>
+<msg time="2024-10-29T08:56:53.032723" level="INFO">${test} = True</msg>
+<var>${test}</var>
+<arg>assert Suggestions Dialogue appear</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-10-29T08:56:52.016416" elapsed="1.016307"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="close suggestions dialogue" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:56:53.034248" level="INFO">Clicking button 'xpath://*[@id="users-suggestions-modal"]/div/div/div[1]/button'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:56:53.034248" elapsed="5.073458"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:56:53.034248" elapsed="5.073458"/>
+</kw>
+<arg>seleniumlibrary.click button</arg>
+<arg>${LOGIN_CLOESE_SUGGESTIONS_DIALOGUE}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:56:53.033736" elapsed="5.073970"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:56:53.032723" elapsed="5.074983"/>
+</kw>
+<arg>'${test}' != 'PASS'</arg>
+<arg>close suggestions dialogue</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-10-29T08:56:53.032723" elapsed="5.074983"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:56:52.015388" elapsed="6.092318"/>
+</kw>
+<kw name="Open Login Dialogue" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:56:58.110764" level="INFO">Clicking element 'xpath://*[@id="top-header-v2"]/div/div/div[3]/a[2]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:56:58.110764" elapsed="2.046612"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:56:58.109763" elapsed="2.047613"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:56:58.109763" elapsed="2.047613"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:56:58.108766" elapsed="2.048610"/>
+</kw>
+<kw name="Assert Login Dialogue Opened Successfully" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>@{KWARGS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-29T08:57:00.159311" elapsed="1.014075"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:00.159311" elapsed="1.014075"/>
+</kw>
+<arg>seleniumLibrary.WAIT UNTIL PAGE CONTAINS</arg>
+<arg>${HEADER_LOGIN_DIALOG_TEXT}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:00.157887" elapsed="1.015499"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:57:00.157887" elapsed="1.015499"/>
+</kw>
+<kw name="Insert Mobile Number" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:01.178407" level="INFO">Typing text '45645645' into text field 'xpath://input[@name="mobile"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:01.178407" elapsed="3.089278"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:01.177407" elapsed="3.090278"/>
+</kw>
+<arg>SeleniumLibrary.input text</arg>
+<arg>${LOGIN_NUMBER}</arg>
+<arg>${mobile_num}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:01.176409" elapsed="3.091276"/>
+</kw>
+<arg>${mobile_num}</arg>
+<status status="PASS" start="2024-10-29T08:57:01.174419" elapsed="3.093266"/>
+</kw>
+<kw name="Submit Login" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:04.268693" level="INFO">Clicking element 'xpath://*[@id="auth-modal"]/div/div/div/div/form/div[2]/button'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:04.268693" elapsed="2.052938"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:04.268693" elapsed="2.052938"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${LOGIN_CONTINUE}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:04.267685" elapsed="2.053946"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:57:04.267685" elapsed="2.053946"/>
+</kw>
+<arg>45645645</arg>
+<status status="PASS" start="2024-10-29T08:56:43.862584" elapsed="22.459047"/>
+</kw>
+<kw name="Assert OTP dialogue Opened Successfully" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>@{KWARGS}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-10-29T08:57:06.323888" elapsed="1.012765"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:06.323888" elapsed="1.012765"/>
+</kw>
+<arg>seleniumlibrary.WAIT UNTIL PAGE CONTAINS</arg>
+<arg>${HEADER_OTP_DIALOG_TEXT}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:06.323888" elapsed="1.012765"/>
+</kw>
+<status status="PASS" start="2024-10-29T08:57:06.322639" elapsed="1.014014"/>
+</kw>
+<kw name="Insert invalid otp">
+<kw name="Insert OTP" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:07.343625" level="INFO">Typing text '1' into text field 'xpath://input[@class="num1"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:07.342603" elapsed="3.065833"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:07.339086" elapsed="3.069350"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_OTP_1}</arg>
+<arg>${OTP_1}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:07.337087" elapsed="3.071349"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:10.413939" level="INFO">Typing text '1' into text field 'xpath://input[@class="num2"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:10.412459" elapsed="3.057792"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:10.411459" elapsed="3.058792"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_OTP_2}</arg>
+<arg>${OTP_2}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:10.409467" elapsed="3.060784"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:13.471253" level="INFO">Typing text '1' into text field 'xpath://input[@class="num3"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:13.471253" elapsed="3.059913"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:13.471253" elapsed="3.059913"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_OTP_3}</arg>
+<arg>${OTP_3}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:13.470251" elapsed="3.061426"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:16.534732" level="INFO">Typing text '1' into text field 'xpath://input[@class="num4"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:16.534732" elapsed="3.065068"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:16.533735" elapsed="3.066065"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_OTP_4}</arg>
+<arg>${OTP_4}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:16.531677" elapsed="3.068123"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:19.602844" level="INFO">Typing text '1' into text field 'xpath://*[@id="auth-pin-form"]/div/div[1]/input[5]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:19.602844" elapsed="3.068449"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:19.601828" elapsed="3.069465"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_OTP_5}</arg>
+<arg>${OTP_5}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:19.600872" elapsed="3.070421"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:22.672854" level="INFO">Typing text '1' into text field 'xpath://*[@id="auth-pin-form"]/div/div[1]/input[6]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-29T08:57:22.671811" elapsed="3.061556"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-10-29T08:57:22.671811" elapsed="3.062117"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_OTP_6}</arg>
+<arg>${OTP_6}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-10-29T08:57:22.671811" elapsed="3.062117"/>
+</kw>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<arg>1</arg>
+<status status="PASS" start="2024-10-29T08:57:07.337087" elapsed="18.396841"/>
+</kw>
+<kw name="Assert invalid otp" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2024-10-29T08:57:32.993899" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-29T08:57:32.993899" level="FAIL">Text 'Invalid otpppp' did not appear in 5 seconds.</msg>
+<arg>${OTP_INVALID_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2024-10-29T08:57:25.734946" elapsed="7.262961">Text 'Invalid otpppp' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-10-29T08:57:25.734439" elapsed="7.263468">Text 'Invalid otpppp' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-10-29T08:57:07.337087" elapsed="25.661814">Text 'Invalid otpppp' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-10-29T08:57:32.999153" elapsed="0.001010"/>
+</kw>
+<status status="FAIL" start="2024-10-29T08:56:43.857335" elapsed="49.142828">Text 'Invalid otpppp' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" start="2024-10-29T08:56:43.584304" elapsed="49.419374"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="LoginCases">LoginCases</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-29T08:56:43.737613" level="ERROR">Error in file 'D:\Ali\automation-main\002Web\Resources\003-UserManagement\0011101-Login\LoginKeywords.robot' on line 17: Creating keyword 'check user can login with facebook' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-10-29T08:56:43.739602" level="WARN">Error in file 'D:\Ali\automation-main\002Web\Resources\003-UserManagement\0011101-Login\LoginKeywords.robot' on line 26: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T08:56:43.749094" level="ERROR">Error in file 'D:\Ali\automation-main\002Web\Resources\003-UserManagement\0011101-Login\LoginKeywords.robot' on line 7: Resource file '002Web\Resources\003-UserManagement\0011101-Login\LoginLocators.robot' does not exist.</msg>
+<msg time="2024-10-29T08:56:43.761543" level="ERROR">Error in file 'D:\Ali\automation-main\002Web\Resources\00111-Home\HomeKeywords.robot' on line 11: Importing library 'pyperclip' failed: ModuleNotFoundError: No module named 'pyperclip'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\ahmed.elsayed\AppData\Local\Programs\Python\Python311\Scripts\robot.exe
+  C:\Users\ahmed.elsayed\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\ahmed.elsayed\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\ahmed.elsayed\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\ahmed.elsayed\AppData\Local\Programs\Python\Python311
+  C:\Users\ahmed.elsayed\AppData\Local\Programs\Python\Python311\Lib\site-packages</msg>
+<msg time="2024-10-29T08:56:43.766178" level="WARN">Error in file 'D:\Ali\automation-main\002Web\Resources\003-UserManagement\0011102-Register\RegisterKeywords.robot' on line 38: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-10-29T08:56:43.767076" level="WARN">Error in file 'D:\Ali\automation-main\002Web\Resources\003-UserManagement\0011102-Register\RegisterKeywords.robot' on line 72: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-02-17T23:55:27.424168" rpa="false" schemaversion="5">
+<suite id="s1" name="SearchScenario" source="C:\NonFunctional\Automation\TestCases\Web\SearchScenario.robot">
+<kw name="Begin Web Test" owner="CommonKeyWords" type="SETUP">
+<kw name="Configure Test Timing" owner="CommonKeyWords">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${COMMON_IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-02-17T23:55:27.735494" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${COMMON_TIME_OUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-02-17T23:55:27.736273" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Page Load Timeout" owner="SeleniumLibrary">
+<arg>${COMMON_LOAD_TIME_OUT}</arg>
+<doc>Sets the page load timeout value used by Selenium.</doc>
+<status status="PASS" start="2024-02-17T23:55:27.736273" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${COMMON_SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-02-17T23:55:27.736273" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:27.734498" elapsed="0.001775"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:27.738323" level="INFO">Opening browser 'chrome' to base url 'https://test.kamashka.com'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-17T23:55:27.737326" elapsed="3.924679"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:27.737326" elapsed="3.924679"/>
+</kw>
+<arg>OPEN BROWSER</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>${alias}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:27.737326" elapsed="3.924679"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<arg>@{KWARGS}</arg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-17T23:55:31.664007" elapsed="0.237165"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:31.663023" elapsed="0.239133"/>
+</kw>
+<arg>MAXIMIZE BROWSER WINDOW</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:31.663023" elapsed="0.239133"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:27.734498" elapsed="4.167658"/>
+</kw>
+<test id="s1-t1" name=" Check that user able to use search module" line="17">
+<kw name="Open Login DropDown Menu" owner="Header">
+<kw name="verify That Header is Successfully Appear" owner="HeaderKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HEADER_SHOP_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:31.906144" elapsed="0.124916"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:31.906144" elapsed="0.124916"/>
+</kw>
+<kw name="Click Profile Icon To Sign" owner="HeaderKeywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:32.032832" level="INFO">Clicking button 'id=sign-in'.</msg>
+<arg>${HEADER_PROFILE_ICON_TO_SIGN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:32.032060" elapsed="0.846742"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:32.031060" elapsed="0.847742"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:31.905149" elapsed="0.973653"/>
+</kw>
+<kw name="Navigate to login page" owner="UserManagementPage">
+<kw name="Verify Profile Menu Pragraph Appear Successfully" owner="UserManagementKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HEADER_DRPDOWN_MENU_PRAGRAPH}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:32.879809" elapsed="0.111949"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HEADER_DRPDOWN_MENU_PRAGRAPH_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:32.991758" elapsed="0.117405"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:32.879809" elapsed="0.229354"/>
+</kw>
+<kw name="Click On Login Button" owner="UserManagementKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:33.110178" level="INFO">Clicking element '//*[@class="dropdown-menu disable-auto-close show"]/div/a[1]'.</msg>
+<arg>${HEADER_LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:33.110178" elapsed="0.738826"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:33.109163" elapsed="0.739841"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:32.878802" elapsed="0.970202"/>
+</kw>
+<kw name="SignIn" owner="LoginPage">
+<kw name="Verify Login Page Loaded Successfully" owner="LoginKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HEADER_LOGIN_BUTTON_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:33.850003" elapsed="0.107882"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HEADER_LOGIN_FORGETPASSWORD_LINK_TEXT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:33.957885" elapsed="0.114509"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:33.850003" elapsed="0.222391"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="LoginKeywords">
+<kw name="Enter User Name" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:34.076929" level="INFO">Typing text 'nada3@app.com' into text field 'name=email'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:34.076929" elapsed="0.412456"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:34.075831" elapsed="0.413554"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${LOGIN_USER_NAME}</arg>
+<arg>${username}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:34.074663" elapsed="0.414722"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2024-02-17T23:55:34.074453" elapsed="0.414932"/>
+</kw>
+<kw name="Enter Password" owner="LoginKeywords">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:34.491388" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2024-02-17T23:55:34.744826" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LOGIN_USER_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:34.491388" elapsed="0.421310"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-02-17T23:55:34.490393" elapsed="0.422305"/>
+</kw>
+<kw name="Submit Login" owner="LoginKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:34.915624" level="INFO">Clicking element 'css=button[class='btn btn-primary w-100 text-center']'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:34.915624" elapsed="0.270224"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:34.914633" elapsed="0.271215"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${LOGIN_Submit}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:34.914633" elapsed="0.271215"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:34.913640" elapsed="0.272208"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-02-17T23:55:34.073456" elapsed="1.113353"/>
+</kw>
+<arg>nada3@app.com</arg>
+<arg>Test@1234</arg>
+<status status="PASS" start="2024-02-17T23:55:33.850003" elapsed="1.336806"/>
+</kw>
+<kw name="Verify Home Page Loaded" owner="HomeKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HEADER_LOGIN_CREATE_BUTTON_APPEAR}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:35.188837" elapsed="0.124963"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FOLLOWING_TAB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-17T23:55:35.314811" elapsed="1.284148"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:35.187806" elapsed="1.411153"/>
+</kw>
+<kw name="Search for user" owner="SearchPage">
+<kw name="Search user" owner="SearchKeywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${HOME-PAGE-ASSERT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:36.603909" elapsed="0.253740"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:36.859641" level="INFO">Typing text 'qc.reda95@app.com' into text field 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:36.859641" elapsed="0.455855"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:36.858643" elapsed="0.456853"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${SEARCH-FIELD}</arg>
+<arg>${SEARCH-FOR-USER-TEXT-ARG}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:36.858155" elapsed="0.457341"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:37.318160" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/button'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:37.318160" elapsed="0.509930"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:37.315496" elapsed="0.512594"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-BUTTON}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:37.315496" elapsed="0.512594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH-USER-TAB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-17T23:55:37.829275" elapsed="0.272189"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:38.330891" level="INFO">Current page contains text 'Users'.</msg>
+<arg>${USERS-TAB-ASSERT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-17T23:55:38.102500" elapsed="0.228391"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:38.330891" level="INFO">Clicking element 'xpath=//*[@id="users-tab"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:38.330891" elapsed="0.265630"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:38.330891" elapsed="0.265630"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-USER-TAB}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:38.330891" elapsed="0.265630"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SEARCH-FOLLOW-BUTTON}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-02-17T23:55:38.597635" elapsed="0.430807"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:39.029824" level="INFO">Clicking element 'xpath=//div[@class='users-wrapper relative active']//div[1]//div[2]//a[1]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:39.029824" elapsed="0.269045"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:39.029824" elapsed="0.269045"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-FOLLOW-BUTTON}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:39.028442" elapsed="0.270427"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${FOLLOW-USER-ASSERT}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:39.298869" elapsed="4.516007"/>
+</kw>
+<arg>${SEARCH-FOR-USER-TEXT-ARG}</arg>
+<status status="PASS" start="2024-02-17T23:55:36.602914" elapsed="7.212527"/>
+</kw>
+<kw name="Delete Search" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:43.818463" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:43.818463" elapsed="0.261210"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:43.818463" elapsed="0.261932"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:43.817452" elapsed="0.263051"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:44.080598" level="INFO">Sending key(s) ('\ue017',) to xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input element.</msg>
+<msg time="2024-02-17T23:55:44.576081" level="INFO">Sending key </msg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<arg>${SEARCH-DELETE-BUTTON}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-17T23:55:44.080598" elapsed="0.601725"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:43.815441" elapsed="0.866882"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:36.600896" elapsed="8.081427"/>
+</kw>
+<kw name="Search for store" owner="SearchPage">
+<kw name="Search store" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:44.685886" level="INFO">Typing text 'town team' into text field 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:44.685389" elapsed="0.380179"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:44.684182" elapsed="0.381680"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${SEARCH-FIELD}</arg>
+<arg>${search-for-stores-text-arg}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:44.684182" elapsed="0.382020"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:45.069357" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/button'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:45.068858" elapsed="0.403397"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:45.068405" elapsed="0.403850"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-BUTTON}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:45.066822" elapsed="0.405433"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH-STORE-TAB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-17T23:55:45.472255" elapsed="0.578626"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:46.268617" level="INFO">Current page contains text 'Stores'.</msg>
+<arg>${STORES-TAB-ASSERT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-17T23:55:46.051451" elapsed="0.217166"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:46.268617" level="INFO">Clicking element 'xpath=//*[@id="stores-tab"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:46.268617" elapsed="0.241387"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:46.268617" elapsed="0.241652"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-STORE-TAB}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:46.268617" elapsed="0.241652"/>
+</kw>
+<arg>${search-for-stores-text-arg}</arg>
+<status status="PASS" start="2024-02-17T23:55:44.682323" elapsed="1.827946"/>
+</kw>
+<kw name="Delete Search" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:46.514270" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:46.514270" elapsed="0.255902"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:46.513275" elapsed="0.256897"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:46.512275" elapsed="0.257897"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:46.770172" level="INFO">Sending key(s) ('\ue017',) to xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input element.</msg>
+<msg time="2024-02-17T23:55:47.246668" level="INFO">Sending key </msg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<arg>${SEARCH-DELETE-BUTTON}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-17T23:55:46.770172" elapsed="0.592035"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:46.511278" elapsed="0.850929"/>
+</kw>
+<arg>town team</arg>
+<status status="PASS" start="2024-02-17T23:55:44.682323" elapsed="2.679884"/>
+</kw>
+<kw name="Search for group" owner="SearchPage">
+<kw name="Search groups" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:47.366028" level="INFO">Typing text 'public' into text field 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:47.366028" elapsed="0.371652"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:47.364467" elapsed="0.373213"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${SEARCH-FIELD}</arg>
+<arg>${SEARCH-FOR-GROUPS-TEXT-ARG}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:47.364467" elapsed="0.373213"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:47.739898" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/button'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:47.739898" elapsed="0.532541"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:47.738824" elapsed="0.533615"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-BUTTON}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:47.738379" elapsed="0.534778"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH-GROUP-TAB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-17T23:55:48.274406" elapsed="0.246206"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:48.749178" level="INFO">Current page contains text 'Groups'.</msg>
+<arg>${GROUPS-TAB-ASSERT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-17T23:55:48.520612" elapsed="0.228566"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:48.749178" level="INFO">Clicking element 'xpath=//*[@id="groups-tab"]'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:48.749178" elapsed="0.267482"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:48.749178" elapsed="0.267721"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-GROUP-TAB}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:48.749178" elapsed="0.267721"/>
+</kw>
+<arg>${SEARCH-FOR-GROUPS-TEXT-ARG}</arg>
+<status status="PASS" start="2024-02-17T23:55:47.362207" elapsed="1.654692"/>
+</kw>
+<kw name="Delete Search" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:49.018918" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:49.018918" elapsed="0.275773"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:49.017922" elapsed="0.277302"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:49.017922" elapsed="0.277302"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:49.295224" level="INFO">Sending key(s) ('\ue017',) to xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input element.</msg>
+<msg time="2024-02-17T23:55:49.803273" level="INFO">Sending key </msg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<arg>${SEARCH-DELETE-BUTTON}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-17T23:55:49.295224" elapsed="0.622574"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:49.016899" elapsed="0.900899"/>
+</kw>
+<arg>public</arg>
+<status status="PASS" start="2024-02-17T23:55:47.362207" elapsed="2.555591"/>
+</kw>
+<kw name="Search for post from global search" owner="SearchPage">
+<kw name="Search posts" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:49.920600" level="INFO">Typing text 'Title' into text field 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:49.920600" elapsed="0.367958"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:49.919745" elapsed="0.368813"/>
+</kw>
+<arg>seleniumlibrary.input text</arg>
+<arg>${SEARCH-FIELD}</arg>
+<arg>${search-for-posts-text-arg}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:49.919745" elapsed="0.368813"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:50.291651" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/button'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:50.291296" elapsed="0.432274"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:50.288558" elapsed="0.435012"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-BUTTON}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:50.288558" elapsed="0.435012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH-POST-TAB}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-17T23:55:50.724497" elapsed="0.277962"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:51.231848" level="INFO">Current page contains text 'Posts'.</msg>
+<arg>${POSTS-TAB-ASSERT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-02-17T23:55:51.003143" elapsed="0.228705"/>
+</kw>
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:51.231848" level="INFO">Clicking element 'id=posts-tab'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:51.231848" elapsed="0.286992"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:51.231848" elapsed="0.286992"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-POST-TAB}</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:51.231848" elapsed="0.286992"/>
+</kw>
+<arg>${search-for-posts-text-arg}</arg>
+<status status="PASS" start="2024-02-17T23:55:49.919300" elapsed="1.600505"/>
+</kw>
+<kw name="Delete Search" owner="SearchKeywords">
+<kw name="Run Keyword until Success" owner="CommonKeyWords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:51.523049" level="INFO">Clicking element 'xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input'.</msg>
+<arg>@{KWARGS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-17T23:55:51.523049" elapsed="0.268247"/>
+</kw>
+<arg>${retry}</arg>
+<arg>${retry_interval}</arg>
+<arg>${KW}</arg>
+<arg>@{KWARGS}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-02-17T23:55:51.522055" elapsed="0.269241"/>
+</kw>
+<arg>seleniumlibrary.click element</arg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<doc>this keyword will help to make your test scuceeded and if failed it retry to make it success this could be used for clcik element/ button and Run Keyword until Success    seleniumlibrary.input text</doc>
+<status status="PASS" start="2024-02-17T23:55:51.521042" elapsed="0.270254"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:51.791296" level="INFO">Sending key(s) ('\ue017',) to xpath=//*[@id="top-header"]/div/div/div[3]/div/form/input element.</msg>
+<msg time="2024-02-17T23:55:52.324426" level="INFO">Sending key </msg>
+<arg>${SEARCH-FIELD-DOUBLE-CLICK }</arg>
+<arg>${SEARCH-DELETE-BUTTON}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-17T23:55:51.791296" elapsed="0.645462"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:51.519805" elapsed="0.916953"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${AUTO_POST_TITLE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-02-17T23:55:52.436758" elapsed="0.133857"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:49.918845" elapsed="2.651770"/>
+</kw>
+<kw name="Scroll" owner="SearchPage">
+<kw name="Scroll down" owner="SearchKeywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-17T23:55:52.572668" level="INFO">Executing JavaScript:
+window.scrollTo(0,200)
+Without any arguments.</msg>
+<arg>${SEARCH-SCROLL-DOWN}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-17T23:55:52.572668" elapsed="0.117580"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:52.572668" elapsed="0.118231"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:52.572668" elapsed="0.118231"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:31.903160" elapsed="20.788767"/>
+</test>
+<kw name="End Web Test" owner="CommonKeyWords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-17T23:55:52.696591" elapsed="2.311917"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:52.694914" elapsed="2.313594"/>
+</kw>
+<status status="PASS" start="2024-02-17T23:55:27.434248" elapsed="27.574260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SearchScenario">SearchScenario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

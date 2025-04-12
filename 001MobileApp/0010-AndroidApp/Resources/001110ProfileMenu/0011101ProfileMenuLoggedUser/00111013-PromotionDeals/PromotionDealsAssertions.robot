@@ -1,0 +1,8 @@
+*** Settings ***
+Library     SeleniumLibrary
+
+*** Variables ***
+${PROMOTION_DEALS_DEAL_WITH_TEXT_APPEAR}    Deal with
+${PROMOTION_DEALS_COMMISSION_PERCENT_TEXT}     10 %
+${PROMOTION_DEALS_DISCOUNT_PERCENT_TEXT}     20 %
+${PROMOTION_DEALS_PROMOTE_PRODUCT_TEXT_APPEAR}     Promote product

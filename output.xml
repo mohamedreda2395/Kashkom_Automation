@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.11.0 on win32)" generated="2025-02-03T22:44:18.453815" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\workstation\Downloads\automation-main\TestCases\Web\Login.robot">
+<test id="s1-t1" name="AI AI AI AI" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-03T22:44:18.679690" level="INFO">Opening browser 'chrome' to base url 'https://test.kashkom.com'.</msg>
+<arg>https://test.kashkom.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-03T22:44:18.679690" elapsed="3.396656"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-03T22:44:22.076346" elapsed="0.040736"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-03T22:44:24.118525" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-03T22:44:22.118018" elapsed="2.000787"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T22:44:24.119896" level="INFO">Clicking element 'xpath://*[@id="users-suggestions-modal"]/div/div/div[1]/button/i'.</msg>
+<arg>xpath://*[@id="users-suggestions-modal"]/div/div/div[1]/button/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T22:44:24.119896" elapsed="0.262780"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-03T22:44:26.384350" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-03T22:44:24.383687" elapsed="2.000663"/>
+</kw>
+<tag>regre</tag>
+<status status="PASS" start="2025-02-03T22:44:18.678656" elapsed="7.707837"/>
+</test>
+<status status="PASS" start="2025-02-03T22:44:18.455517" elapsed="7.932974"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regre</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
